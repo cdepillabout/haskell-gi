@@ -19,6 +19,10 @@ cabal-version:       >=1.8
 
 extra-source-files: ChangeLog.md
 
+custom-setup
+  setup-depends:      base
+                    , Cabal >= 2.4.0.0
+
 source-repository head
   type: git
   location: git://github.com/haskell-gi/haskell-gi.git
