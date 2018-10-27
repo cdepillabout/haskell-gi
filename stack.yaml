@@ -1,20 +1,15 @@
 # For more information, see: http://docs.haskellstack.org/en/stable/yaml_configuration.html
 
 # Specifies the GHC version and set of packages available (e.g., lts-3.5, nightly-2015-09-21, ghc-7.10.2)
-resolver: lts-12.13
+resolver: lts-9.21
 
 # Local packages, usually specified by relative directory name
 packages:
-    - '.'
+  - '.'
 
 # Packages to be pulled from upstream that are not in the resolver (e.g., acme-missiles-0.3)
-extra-deps: []
-    # - gi-vte-2.91.19
-    # - hsc2hs-0.68.3
-    # - Cabal-2.4.0.1
-    # - lens-4.17
-    # - git: https://github.com/cdepillabout/haskell-gi
-    #   commit: a5d5abf
+extra-deps:
+  - haskell-gi-base-0.21.4@sha256:c5e8e6f11416be4008b6a630c702fdee32e990ac6cdc741650d00a05a55f5929
 
 # Override default flag values for local packages and extra-deps
 flags: {}

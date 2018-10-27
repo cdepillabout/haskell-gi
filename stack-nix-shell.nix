@@ -28,4 +28,5 @@ haskell.lib.buildStackProject {
     # gtk3
     zlib
   ];
+  ghc = haskell.compiler.ghc802;
 }
