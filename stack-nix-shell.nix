@@ -14,6 +14,10 @@ let
     if pkgs == null
     then import nixpkgsTarball {}
     else import pkgs {};
+
+  ghc = nixpkgs.haskell.compiler.ghc843.overrideAttrs (oldAttrs: {
+    patches = oldAttrs.patches ++ [ ./ghc-8.4.3-cabal-long-args.patch ];
+  });
 in
 
 with nixpkgs;
@@ -28,4 +32,5 @@ haskell.lib.buildStackProject {
     # gtk3
     zlib
   ];
+  inherit ghc;
 }
